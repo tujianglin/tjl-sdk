@@ -1,0 +1,15 @@
+# npm
+node_modules
+yarn.lock
+package-lock.json
+
+# dev
+build
+packages
+
+#other
+.github
+.gitgnore
+.npmignore
+rollup.config.ts
+tsconfig.json

@@ -1,0 +1,18 @@
+# OSX
+.DS_Store
+
+# IDE
+.idea
+.vscode
+
+# npm
+node_modules
+yarn.lock
+package-lock.json
+
+
+# build
+lib
+
+#dev
+demo

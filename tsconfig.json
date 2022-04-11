@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"target": "ES2017",
+		"module": "ESNext",
+		"allowJs": true,
+		"jsx": "preserve",
+		"moduleResolution": "Node",
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+		"importHelpers": true,
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./packages/*"]
+		},
+		"typeRoots": ["./node_modules/@types"]
+	},
+	"exclude": ["node_modules"],
+  "include": ["packages"]
+}
