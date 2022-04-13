@@ -46,7 +46,6 @@ fs.readdir(remotePath, function (err, files) {
           fs.appendFileSync(outputFile, catalogue)
           if (names) {
             names.forEach((v, i) => {
-              console.log(v)
               fs.appendFileSync(outputFile, `- [${v}](#${v}) ${des[i]}` + '\n')
             })
           }
@@ -66,11 +65,9 @@ fs.readdir(remotePath, function (err, files) {
         if (!err) {
           if (stats.isFile()) {
             let content = fs.readFileSync(filedir, 'utf-8') + '\n\n'
-            const catalogue = '\n' + `### ${content.match(reg)[0]}` + '\n\n'
             const names = content.match(regName)
             const des = content.match(regDes)
             const examples = content.match(regExample)
-            console.log(examples)
             names && names.forEach((v, i) => {
               fs.appendFileSync(
                 outputFile,
