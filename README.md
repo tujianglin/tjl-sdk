@@ -12,13 +12,13 @@ add(1, 2)
 
 ## API 目录
 
-###  文档方法
-
-- [previewFile](#previewFile)  预览文本(可扩展其他预览)
-
 ###  普通方法
 
 - [add](#add)  两数字相加
+
+###  文档方法
+
+- [previewFile](#previewFile)  预览文本(可扩展其他预览)
 
 ## API 说明
 
