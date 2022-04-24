@@ -4,7 +4,7 @@
 	"description": "工具组件库",
 	"main": "./lib/main.js",
 	"scripts": {
-		"build": "npm run build:docx && cross-env NODE_ENV=prod rollup -c",
+		"build": "cross-env NODE_ENV=prod rollup -c",
 		"build:docx": "node build/index.js",
 		"lint:lint-stage": "lint-staged",
 		"prepare": "husky install",

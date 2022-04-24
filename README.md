@@ -12,15 +12,27 @@ add(1, 2)
 
 ## API 目录
 
-###  普通方法
+###  时间方法
 
-- [add](#add)  两数字相加
+- [day](#day)  时间(可扩展其他预览)
 
 ###  文档方法
 
 - [previewFile](#previewFile)  预览文本(可扩展其他预览)
 
+###  普通方法
+
+- [add](#add)  两数字相加
+
 ## API 说明
+
+### day
+              
+ 时间(可扩展其他预览)
+
+```javascript
+* previewFile({url: 'http://xxx.xxx/xx.txt', type: 'txt'})
+```
 
 ### previewFile
               
