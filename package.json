@@ -8,7 +8,8 @@
 		"build:docx": "node build/index.js",
 		"lint:lint-stage": "lint-staged",
 		"prepare": "husky install",
-		"commit": "git-cz"
+		"commit": "git-cz",
+		"new": "plop --plopfile ./plop-templates/plopfile.js"
 	},
 	"keywords": [],
 	"author": "",
@@ -33,6 +34,7 @@
 		"gulp": "^4.0.2",
 		"husky": "^7.0.4",
 		"lint-staged": "^12.4.0",
+		"plop": "^3.0.5",
 		"prettier": "^2.6.2",
 		"rollup": "^2.70.1",
 		"rollup-plugin-terser": "^7.0.2",

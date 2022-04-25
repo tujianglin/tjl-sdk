@@ -6,6 +6,7 @@ package-lock.json
 # dev
 build
 packages
+plop-templates
 
 #other
 .github
