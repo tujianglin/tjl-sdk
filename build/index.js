@@ -40,7 +40,6 @@ fs.readdir(remotePath, function (err, files) {
         if (stats.isFile()) {
           let content = fs.readFileSync(filedir, 'utf-8') + '\n\n'
           // 获取到 数据流 中满足正则部分内容
-          console.log(content)
           const catalogue = '\n' + `### ${content.match(reg)[0]}` + '\n\n'
           const names = content.match(regName)
           const des = content.match(regDes)
@@ -80,7 +79,7 @@ ${des[i]}
 ` +
                 '```javascript' +
                 `
-${examples[i].trim()}` +
+${examples[i]}` +
                 '\n' +
                 '```' +
                 '\n'
