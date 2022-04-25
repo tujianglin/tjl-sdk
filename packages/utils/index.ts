@@ -12,6 +12,6 @@
  * @example 
  * add(1, 2) => 3
  */
-export const add = (n1: number, n2: number): number => n1 + n2;
+export const add = (n1: number, n2: number): number => n1 + n2
 
 

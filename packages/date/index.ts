@@ -13,7 +13,7 @@ import dayjs from 'dayjs';
  * @example 
  * timeToDate(1650764013237,{d: '天', h: '时', m: '分', s: '秒'}) => '2天6时55分21秒'
  */
-export const timeToDate = (date: number, { d, h, m, s }): string => dayjs(date).format('DD' + d + 'HH' + h + 'mm' + m + 'ss' + s);
+export const timeToDate = (date: number, { d, h, m, s }): string => dayjs(date).format('DD' + d + 'HH' + h + 'mm' + m + 'ss' + s)
 
 
 
