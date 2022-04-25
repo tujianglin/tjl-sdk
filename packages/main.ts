@@ -4,3 +4,4 @@
  */
 export { add } from './utils'
 export { previewFile } from './file'
+export { timeToDate } from './date'

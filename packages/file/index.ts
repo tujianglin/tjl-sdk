@@ -1,6 +1,6 @@
 /* 
  * @Description: 文档方法
- * @FilePath: /tjl-sdk/packages/utils/file.ts
+ * @FilePath: /tjl-sdk/packages/file/index.ts
  */
 
 /**
