@@ -2,8 +2,9 @@
  * @Description: 
  * @FilePath: /tjl-sdk/packages/main.ts
  */
-export { add } from './utils'
+export { timeToDate } from './date'
 export { previewFile } from './file'
+<<<<<<< HEAD
 export { timeToDate } from './date'
 export {
     isvalidUsernamel,
@@ -23,3 +24,6 @@ export {
     validateNumOrNumoed,
     validatenull
 } from './validate'
+=======
+export { is, isArray, isBoolean, isDate, isDef, isElement, isEmpty, isFunction, isMap, isNull, isNullAndUnDef, isNullOrUnDef, isNumber, isObject, isPromise, isRegExp, isString, isUnDef, isUrl, isWindow } from './is'
+>>>>>>> master
