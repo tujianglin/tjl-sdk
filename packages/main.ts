@@ -2,7 +2,9 @@
  * @Description: 
  * @FilePath: /tjl-sdk/packages/main.ts
  */
-export { timeToDate } from './date'
+export { 
+    timeToDate 
+} from './date'
 export { previewFile } from './file'
 export {
     isvalidUsername,
