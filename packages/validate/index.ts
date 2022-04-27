@@ -146,7 +146,7 @@ export const isCardid = (code: string): { errorMessage: string, isPass: boolean 
         isPass = false
     } else if (code.length === 18) {
         // 18位身份证需要验证最后一位校验位
-        let codeStr = code.split('')
+        const codeStr = code.split('')
         // ∑(ai×Wi)(mod 11)
         // 加权因子
         const factor = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2]
@@ -179,7 +179,7 @@ export const isCardid = (code: string): { errorMessage: string, isPass: boolean 
  * validatenamel("张三") => true
  */
 export const isName = (name: string): boolean => {
-    var regName = /^[\u4e00-\u9fa5]{2,4}$/
+    const regName = /^[\u4e00-\u9fa5]{2,4}$/
     if (!regName.test(name)) return false
     return true
 }
