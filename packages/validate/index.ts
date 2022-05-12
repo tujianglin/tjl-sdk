@@ -1,3 +1,8 @@
+/* 
+ * @Description: 正则校验
+ * @FilePath: /tjl-sdk/packages/utils/validate/index.ts
+ */
+
 /**
  * @description: 是否包含当前用户名
  * @author: yushixin
