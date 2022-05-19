@@ -1,4 +1,4 @@
-# tjl-sdk
+# armory9
 
 工具组件库基础模板
 
@@ -10,9 +10,31 @@ npm run new function
 
 ## API 目录
 
+###  加密方法
+
+- [Encrypt](#Encrypt)  AES加密
+- [Decrypt](#Decrypt)  AES解密
+
 ###  时间戳方法
 
 - [timeToDate](#timeToDate)  时间戳转日期方法
+
+###  操作dom元素
+
+- [$](#$)  获取 dom 元素
+- [getWinW](#getWinW)  获取浏览器宽度
+- [getWinH](#getWinH)  获取浏览器高度
+- [hasClass](#hasClass)  判断元素是否存在className
+- [addClass](#addClass)  给元素添加className
+- [removeClass](#removeClass)  删除元素className
+
+###  文档方法
+
+- [previewFile](#previewFile)  预览文本(可扩展其他预览)
+
+###  普通方法
+
+- [add](#add)  两数字相加
 
 ###  类型判断
 
@@ -36,14 +58,13 @@ npm run new function
 - [isElement](#isElement)  是否是 element 元素
 - [isMap](#isMap)  是否是 Map 对象
 - [isUrl](#isUrl)  是否是 url 路径
+- [isJson](#isJson)  是否是JSON
 
-###  文档方法
+###  本地缓存方法
 
-- [previewFile](#previewFile)  预览文本(可扩展其他预览)
-
-###  普通方法
-
-- [add](#add)  两数字相加
+- [Local](#Local)  操作localStorage缓存
+- [Session](#Session)  操作session缓存
+- [Cookie](#Cookie)  操作cookie缓存
 
 ###  正则校验
 
@@ -58,6 +79,9 @@ npm run new function
 - [isCardid](#isCardid)  判断身份证号码
 - [isName](#isName)  判断姓名是否正确
 - [isInteger](#isInteger)  判断是整数还是小数
+- [isIP](#isIP)  判断是否是ip
+- [isChina](#isChina)  判断是否是中文
+- [isTel](#isTel)  判断是否是固定电话
 
 ## API 说明
 
@@ -68,6 +92,16 @@ npm run new function
 ```javascript
  
  * timeToDate(1650764013237,{d: '天', h: '时', m: '分', s: '秒'}) => '2天6时55分21秒'
+ 
+```
+
+### previewFile
+              
+ 预览文本(可扩展其他预览)
+
+```javascript
+
+ * previewFile({url: 'http://xxx.xxx/xx.txt', type: 'txt'})
  
 ```
 
@@ -271,13 +305,33 @@ npm run new function
  
 ```
 
-### previewFile
+### isJson
               
- 预览文本(可扩展其他预览)
+ 是否是JSON
 
 ```javascript
+ 
+ * isJson('{}') // true
+ 
+```
 
- * previewFile({url: 'http://xxx.xxx/xx.txt', type: 'txt'})
+### Encrypt
+              
+ AES加密
+
+```javascript
+ 
+ * Encrypt(参数1: 加密数据, 参数2: 密钥(长度必须16位), 参数3: 初始向量(长度随意))
+ 
+```
+
+### Decrypt
+              
+ AES解密
+
+```javascript
+ 
+ * Encrypt(参数1: 加密数据, 参数2: 密钥(长度必须16位), 参数3: 初始向量(长度随意))
  
 ```
 
@@ -288,6 +342,104 @@ npm run new function
 ```javascript
  
  * add(1, 2) => 3
+ 
+```
+
+### Local
+              
+ 操作localStorage缓存
+
+```javascript
+ 
+ * Local.set() // 设置永久缓存
+ * Local.get() // 获取永久缓存
+ * Local.remove() // 移除永久缓存
+ * Local.clear() // 移除全部永久缓存
+ 
+```
+
+### Session
+              
+ 操作session缓存
+
+```javascript
+ 
+ * Session.set() // 设置session缓存
+ * Session.get() // 获取session缓存
+ * Session.remove() // 移除session缓存
+ * Session.clear() // 移除全部永久缓存
+ 
+```
+
+### Cookie
+              
+ 操作cookie缓存
+
+```javascript
+ 
+ * Cookie.get() // 获取cookie缓存
+ * Cookie.set() // 设置cookie缓存
+ * Cookie.remove() // 删除cookie缓存
+ 
+```
+
+### $
+              
+ 获取 dom 元素
+
+```javascript
+ 
+ * $('#app') 
+ 
+```
+
+### getWinW
+              
+ 获取浏览器宽度
+
+```javascript
+ 
+ * getWinW
+ 
+```
+
+### getWinH
+              
+ 获取浏览器高度
+
+```javascript
+ 
+ * getWinH
+ 
+```
+
+### hasClass
+              
+ 判断元素是否存在className
+
+```javascript
+ 
+ * hasClass(dom元素, class名称)
+ 
+```
+
+### addClass
+              
+ 给元素添加className
+
+```javascript
+ 
+ * addClass(dom元素, class名称)
+ 
+```
+
+### removeClass
+              
+ 删除元素className
+
+```javascript
+ 
+ * removeClass(dom元素, class名称)
  
 ```
 
@@ -398,5 +550,35 @@ npm run new function
 ```javascript
  
  * isInteger(123) => true
+ 
+```
+
+### isIP
+              
+ 判断是否是ip
+
+```javascript
+ 
+ * isIP('123')
+ 
+```
+
+### isChina
+              
+ 判断是否是中文
+
+```javascript
+ 
+ * isChina('123') => false
+ 
+```
+
+### isTel
+              
+ 判断是否是固定电话
+
+```javascript
+ 
+ * isTel('123') => false
  
 ```

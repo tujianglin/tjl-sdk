@@ -221,3 +221,25 @@ export const isUrl = (path: string): boolean => {
   return reg.test(path);
 }
 
+/**
+ * @description: 是否是JSON
+ * @author: tujianglin
+ * @example 
+ * isJson('{}') // true
+ */
+export const isJson = (value: string): boolean => {
+  if (typeof value == 'string') {
+    try {
+      const obj = JSON.parse(value);
+      if (typeof obj == 'object' && obj) {
+        return true;
+      } else {
+        return false;
+      }
+    } catch (e) {
+      return false;
+    }
+  }
+  return false;
+}
+
